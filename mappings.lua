@@ -2,7 +2,7 @@ local hop_keys = require("user.configs.hop").keys
 
 return {
   i = {
-    --copilot
+    -- copilot
     ["<S-Enter>"] = { 'copilot#Accept("<CR>")', silent = true, expr = true },
     ["‘"] = { 'copilot#Next()', silent = true, expr = true },
     ["“"] = { 'copilot#Previous()', silent = true, expr = true },
