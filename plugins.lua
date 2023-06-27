@@ -12,6 +12,12 @@ local surround = {
   config = function() require("nvim-surround").setup({}) end
 }
 
+local notify = {
+  "rcarriga/nvim-notify",
+  config = require("user.configs.notify").config,
+  lazy = false
+}
+
 local hairline = { "rebelot/heirline.nvim", opts = require("user.configs.heirline").opts }
 local hop = { "phaazon/hop.nvim", branch = "v2", config = require("user.configs.hop").config, lazy = false }
 local dracula = { "dracula/vim", name = "dracula", priority = 1000, lazy = false }
@@ -23,4 +29,4 @@ local move = { "fedepujol/move.nvim", name = "move", lazy = false }
 
 -- local jukit = { "luk400/vim-jukit", name = "jukit" }
 
-return { dracula, catppuccin, harpoon, undotree, copilot, lspsaga, hop, move, hairline, surround }
+return { dracula, catppuccin, harpoon, undotree, copilot, lspsaga, hop, move, hairline, surround, notify }
