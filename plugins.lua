@@ -12,6 +12,12 @@ local surround = {
   config = function() require("nvim-surround").setup({}) end
 }
 
+local auto_save = {
+  "okuuva/auto-save.nvim",
+  event = { "InsertLeave", "TextChanged" },
+  opts = require("user.configs.auto-save").opts
+}
+
 local neotree = { "nvim-neo-tree/neo-tree.nvim", opts = require("user.configs.neo-tree").opts }
 local notify = { "rcarriga/nvim-notify", config = require("user.configs.notify").config, lazy = false }
 local neoscroll = { "karb94/neoscroll.nvim", config = require("user.configs.neoscroll").config, lazy = false }
@@ -40,4 +46,5 @@ return {
   notify,
   neoscroll,
   neotree,
+  auto_save,
 }
