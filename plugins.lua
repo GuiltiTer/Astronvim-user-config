@@ -18,6 +18,13 @@ local notify = {
   lazy = false
 }
 
+local neoscroll = {
+  "karb94/neoscroll.nvim",
+  config = require("user.configs.neoscroll").config,
+  lazy = false
+
+}
+
 local hairline = { "rebelot/heirline.nvim", opts = require("user.configs.heirline").opts }
 local hop = { "phaazon/hop.nvim", branch = "v2", config = require("user.configs.hop").config, lazy = false }
 local dracula = { "dracula/vim", name = "dracula", priority = 1000, lazy = false }
@@ -29,4 +36,4 @@ local move = { "fedepujol/move.nvim", name = "move", lazy = false }
 
 -- local jukit = { "luk400/vim-jukit", name = "jukit" }
 
-return { dracula, catppuccin, harpoon, undotree, copilot, lspsaga, hop, move, hairline, surround, notify }
+return { dracula, catppuccin, harpoon, undotree, copilot, lspsaga, hop, move, hairline, surround, notify, neoscroll }
