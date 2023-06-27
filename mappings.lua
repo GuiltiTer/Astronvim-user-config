@@ -36,6 +36,12 @@ return {
   v = {
     -- move
     ["<C-j>"] = { ":'<,'>MoveBlock(1)<cr>", desc = "Move Block Down" },
-    ["<C-k>"] = { ":'<,'>MoveBlock(-1)<cr>", desc = "Move Block Up" }
+    ["<C-k>"] = { ":'<,'>MoveBlock(-1)<cr>", desc = "Move Block Up" },
+
+    -- hop
+    ["f"] = { hop_keys.char_line_after, desc = "Find" },
+    ["F"] = { hop_keys.char_line_before, desc = "Find Backward" },
+    ["t"] = { hop_keys.char_line_after_till, desc = "Till" },
+    ["T"] = { hop_keys.char_line_before_till, desc = "Till Backward" },
   }
 }
