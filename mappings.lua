@@ -39,7 +39,10 @@ return {
     ["[p"] = { require("todo-comments.jump").prev, desc = "Previous TODO" },
 
     -- ranger
-    ["<leader>o"] = { function() require("ranger-nvim").open(true) end, desc = "Ranger" }
+    ["<leader>o"] = { function() require("ranger-nvim").open(true) end, desc = "Ranger" },
+
+    -- neoclip
+    ["<leader>f'"] = { "<cmd>:Telescope neoclip<cr>", desc = "Find Clipboard" }
   },
   v = {
     -- move

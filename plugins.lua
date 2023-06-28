@@ -25,6 +25,13 @@ local todo_comments = {
   dependencies = { "nvim-lua/plenary.nvim" },
 }
 
+local neoclip = {
+  "AckslD/nvim-neoclip.lua",
+  config = require("user.configs.neoclip").config,
+  lazy = false,
+  dependencies = { 'nvim-telescope/telescope.nvim', 'kkharji/sqlite.lua', },
+}
+
 local ranger = { "kelly-lin/ranger.nvim", config = require("user.configs.ranger").config, lazy = false }
 local neotree = { "nvim-neo-tree/neo-tree.nvim", opts = require("user.configs.neo-tree").opts }
 local notify = { "rcarriga/nvim-notify", config = require("user.configs.notify").config, lazy = false }
@@ -58,5 +65,6 @@ return {
   auto_save,
   todo_comments,
   ranger,
+  neoclip,
   -- neotest,
 }
