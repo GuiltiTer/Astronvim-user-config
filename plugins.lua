@@ -51,6 +51,8 @@ local hairline = { "rebelot/heirline.nvim", opts = require("user.configs.heirlin
 local hop = { "phaazon/hop.nvim", branch = "v2", config = require("user.configs.hop").config, lazy = false }
 local dracula = { "dracula/vim", name = "dracula", priority = 1000, lazy = false }
 local catppuccin = { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false }
+local material = { "marko-cerovac/material.nvim", priority = 1000, lazy = false }
+local oxocarbon = { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = false }
 local harpoon = { "ThePrimeagen/harpoon", name = "harpoon", }
 local undotree = { "mbbill/undotree", name = "undotree", lazy = false }
 local codeium = { "Exafunction/codeium.vim", event = "InsertEnter" }
@@ -62,6 +64,8 @@ local move = { "fedepujol/move.nvim", name = "move", lazy = false }
 return {
   dracula,
   catppuccin,
+  material,
+  oxocarbon,
   harpoon,
   undotree,
   codeium,
