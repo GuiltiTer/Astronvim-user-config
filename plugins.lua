@@ -18,6 +18,13 @@ local auto_save = {
   opts = require("user.configs.auto-save").opts
 }
 
+local todo_comments = {
+  "folke/todo-comments.nvim",
+  lazy = false,
+  config = function() require("todo-comments").setup() end,
+  dependencies = { "nvim-lua/plenary.nvim" },
+}
+
 local neotree = { "nvim-neo-tree/neo-tree.nvim", opts = require("user.configs.neo-tree").opts }
 local notify = { "rcarriga/nvim-notify", config = require("user.configs.notify").config, lazy = false }
 local neoscroll = { "karb94/neoscroll.nvim", config = require("user.configs.neoscroll").config, lazy = false }
@@ -47,4 +54,5 @@ return {
   neoscroll,
   neotree,
   auto_save,
+  todo_comments,
 }

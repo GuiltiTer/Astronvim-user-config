@@ -31,7 +31,12 @@ return {
 
     -- move
     ["<C-j>"] = { function() require("move").MoveLine(1) end, desc = "Move Line Down" },
-    ["<C-k>"] = { function() require("move").MoveLine(-1) end, desc = "Move Line Up" }
+    ["<C-k>"] = { function() require("move").MoveLine(-1) end, desc = "Move Line Up" },
+
+    -- todo-comments
+    ["<leader>fp"] = { "<cmd>TodoTelescope<cr>", desc = "Find TODO" },
+    ["]p"] = { require("todo-comments.jump").next, desc = "Next TODO" },
+    ["[p"] = { require("todo-comments.jump").prev, desc = "Previous TODO" },
   },
   v = {
     -- move
