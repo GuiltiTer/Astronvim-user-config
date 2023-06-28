@@ -2,10 +2,10 @@ local hop_keys = require("user.configs.hop").keys
 
 return {
   i = {
-    -- copilot
-    ["<S-Enter>"] = { 'copilot#Accept("<CR>")', silent = true, expr = true },
-    ["‘"] = { 'copilot#Next()', silent = true, expr = true },
-    ["“"] = { 'copilot#Previous()', silent = true, expr = true },
+    -- codeium
+    ["<S-Enter>"] = { "codeium#Accept()", silent = true, expr = true },
+    ["<C-.>"] = { function() vim.api.nvim_call_function("codeium#CycleCompletions", { 1 }) end, silent = true, expr = true },
+    ["<C-,>"] = { function() vim.api.nvim_call_function("codeium#CycleCompletions", { -1 }) end, silent = true, expr = true },
   },
   n = {
     -- basics

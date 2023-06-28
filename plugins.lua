@@ -34,9 +34,10 @@ local dracula = { "dracula/vim", name = "dracula", priority = 1000, lazy = false
 local catppuccin = { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false }
 local harpoon = { "ThePrimeagen/harpoon", name = "harpoon", }
 local undotree = { "mbbill/undotree", name = "undotree", lazy = false }
-local copilot = { "github/copilot.vim", name = "Copilot", cmd = "Copilot" }
+local codeium = { "Exafunction/codeium.vim", event = "InsertEnter" }
 local move = { "fedepujol/move.nvim", name = "move", lazy = false }
 
+-- local copilot = { "github/copilot.vim", name = "Copilot", cmd = "Copilot", event = "InsertEnter" }
 -- local jukit = { "luk400/vim-jukit", name = "jukit" }
 
 return {
@@ -44,7 +45,7 @@ return {
   catppuccin,
   harpoon,
   undotree,
-  copilot,
+  codeium,
   lspsaga,
   hop,
   move,

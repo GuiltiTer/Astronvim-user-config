@@ -7,9 +7,4 @@ return {
       timeoutlen = 100,
     }
   },
-
-  g = {
-    copilot_no_tab_map = true,
-    copilot_assume_mapped = true,
-  },
 }
