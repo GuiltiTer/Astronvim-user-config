@@ -25,6 +25,23 @@ local todo_comments = {
   dependencies = { "nvim-lua/plenary.nvim" },
 }
 
+local ranger = {
+  "kelly-lin/ranger.nvim",
+  config = function()
+    local ranger = require("ranger-nvim")
+    ranger.setup({
+      enable_cmds = false,
+      replace_netrw = false,
+      keybinds = {
+        ["ov"] = ranger.OPEN_MODE.vsplit,
+        ["oh"] = ranger.OPEN_MODE.split,
+        ["ot"] = ranger.OPEN_MODE.tabedit,
+      }
+    })
+  end,
+  lazy = false
+}
+
 local neotree = { "nvim-neo-tree/neo-tree.nvim", opts = require("user.configs.neo-tree").opts }
 local notify = { "rcarriga/nvim-notify", config = require("user.configs.notify").config, lazy = false }
 local neoscroll = { "karb94/neoscroll.nvim", config = require("user.configs.neoscroll").config, lazy = false }
@@ -56,4 +73,6 @@ return {
   neotree,
   auto_save,
   todo_comments,
+  ranger,
+  -- neotest,
 }
