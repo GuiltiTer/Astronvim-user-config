@@ -32,6 +32,15 @@ local neoclip = {
   dependencies = { 'nvim-telescope/telescope.nvim', 'kkharji/sqlite.lua', },
 }
 
+local telescope = {
+  "nvim-telescope/telescope.nvim",
+  cmd = "Telescope",
+  dependencies = {
+    { "nvim-telescope/telescope-fzf-native.nvim", enabled = vim.fn.executable "make" == 1, build = "make" } },
+  config = require("plugins.configs.telescope"),
+  opts = require("user.configs.telescope").opts
+}
+
 local ranger = { "kelly-lin/ranger.nvim", config = require("user.configs.ranger").config, lazy = false }
 local neotree = { "nvim-neo-tree/neo-tree.nvim", opts = require("user.configs.neo-tree").opts }
 local notify = { "rcarriga/nvim-notify", config = require("user.configs.notify").config, lazy = false }
@@ -66,5 +75,6 @@ return {
   todo_comments,
   ranger,
   neoclip,
+  telescope,
   -- neotest,
 }
