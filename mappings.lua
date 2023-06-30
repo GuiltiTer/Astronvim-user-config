@@ -35,8 +35,8 @@ return {
 
     -- todo-comments
     ["<leader>fp"] = { "<cmd>TodoTelescope<cr>", desc = "Find TODO" },
-    ["]p"] = { require("todo-comments.jump").next, desc = "Next TODO" },
-    ["[p"] = { require("todo-comments.jump").prev, desc = "Previous TODO" },
+    ["]p"] = { function() require("todo-comments.jump").next() end, desc = "Next TODO" },
+    ["[p"] = { function() require("todo-comments.jump").prev() end, desc = "Previous TODO" },
 
     -- ranger
     ["<leader>o"] = { function() require("ranger-nvim").open(true) end, desc = "Ranger" },

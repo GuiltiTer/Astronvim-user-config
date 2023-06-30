@@ -20,7 +20,8 @@ local auto_save = {
 
 local todo_comments = {
   "folke/todo-comments.nvim",
-  lazy = false,
+  cmd = { "TodoTelescope", "TodoLocList", "TodoQuickFix" },
+  event = "BufRead",
   config = function() require("todo-comments").setup() end,
   dependencies = { "nvim-lua/plenary.nvim" },
 }
@@ -28,7 +29,7 @@ local todo_comments = {
 local neoclip = {
   "AckslD/nvim-neoclip.lua",
   config = require("user.configs.neoclip").config,
-  lazy = false,
+  event = "BufRead",
   dependencies = { 'nvim-telescope/telescope.nvim', 'kkharji/sqlite.lua', },
 }
 
@@ -48,13 +49,13 @@ local neotree = { "nvim-neo-tree/neo-tree.nvim", opts = require("user.configs.ne
 local notify = { "rcarriga/nvim-notify", config = require("user.configs.notify").config, lazy = false }
 local neoscroll = { "karb94/neoscroll.nvim", config = require("user.configs.neoscroll").config, lazy = false }
 local hairline = { "rebelot/heirline.nvim", opts = require("user.configs.heirline").opts }
-local hop = { "phaazon/hop.nvim", branch = "v2", config = require("user.configs.hop").config, lazy = false }
+local hop = { "phaazon/hop.nvim", branch = "v2", config = require("user.configs.hop").config, event = "BufRead" }
 local dracula = { "dracula/vim", name = "dracula", priority = 1000, lazy = false }
 local catppuccin = { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false }
 local material = { "marko-cerovac/material.nvim", priority = 1000, lazy = false }
 local oxocarbon = { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = false }
 local harpoon = { "ThePrimeagen/harpoon", name = "harpoon", }
-local undotree = { "mbbill/undotree", name = "undotree", lazy = false }
+local undotree = { "mbbill/undotree", name = "undotree", cmd = "UndotreeToggle" }
 local codeium = { "Exafunction/codeium.vim", event = "InsertEnter" }
 local move = { "fedepujol/move.nvim", name = "move", lazy = false }
 
