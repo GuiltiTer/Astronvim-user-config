@@ -42,6 +42,13 @@ local telescope = {
   opts = require("user.configs.telescope").opts
 }
 
+local flash = {
+  "folke/flash.nvim",
+  event = "VeryLazy",
+  opts = require("user.configs.flash").opts,
+  keys = require("user.configs.flash").keys,
+}
+
 local twilight = { "folke/twilight.nvim", cmd = "Twilight" }
 local cccpick = { "uga-rosa/ccc.nvim", cmd = "CccPick" }
 local ranger = { "kelly-lin/ranger.nvim", config = require("user.configs.ranger").config, lazy = false }
@@ -49,7 +56,6 @@ local neotree = { "nvim-neo-tree/neo-tree.nvim", opts = require("user.configs.ne
 local notify = { "rcarriga/nvim-notify", config = require("user.configs.notify").config, lazy = false }
 local neoscroll = { "karb94/neoscroll.nvim", config = require("user.configs.neoscroll").config, lazy = false }
 local hairline = { "rebelot/heirline.nvim", opts = require("user.configs.heirline").opts }
-local hop = { "phaazon/hop.nvim", branch = "v2", config = require("user.configs.hop").config, event = "BufRead" }
 local dracula = { "dracula/vim", name = "dracula", priority = 1000, lazy = false }
 local catppuccin = { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false }
 local material = { "marko-cerovac/material.nvim", priority = 1000, lazy = false }
@@ -71,7 +77,7 @@ return {
   undotree,
   codeium,
   lspsaga,
-  hop,
+  flash,
   move,
   hairline,
   surround,
