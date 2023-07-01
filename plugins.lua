@@ -66,9 +66,6 @@ local undotree = { "mbbill/undotree", name = "undotree", cmd = "UndotreeToggle" 
 local codeium = { "Exafunction/codeium.vim", event = "InsertEnter" }
 local move = { "fedepujol/move.nvim", name = "move", lazy = false }
 
--- local copilot = { "github/copilot.vim", name = "Copilot", cmd = "Copilot", event = "InsertEnter" }
--- local jukit = { "luk400/vim-jukit", name = "jukit" }
-
 return {
   alpha,
   dracula,
@@ -93,5 +90,4 @@ return {
   telescope,
   cccpick,
   twilight,
-  -- neotest,
 }
