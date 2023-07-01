@@ -49,6 +49,7 @@ local flash = {
   keys = require("user.configs.flash").keys,
 }
 
+local alpha = { "goolord/alpha-nvim", opts = require("user.configs.alpha").opts }
 local twilight = { "folke/twilight.nvim", cmd = "Twilight" }
 local cccpick = { "uga-rosa/ccc.nvim", cmd = "CccPick" }
 local ranger = { "kelly-lin/ranger.nvim", config = require("user.configs.ranger").config, lazy = false }
@@ -69,6 +70,7 @@ local move = { "fedepujol/move.nvim", name = "move", lazy = false }
 -- local jukit = { "luk400/vim-jukit", name = "jukit" }
 
 return {
+  alpha,
   dracula,
   catppuccin,
   material,
