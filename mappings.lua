@@ -58,8 +58,8 @@ local unbinds = {
 }
 
 local insert_unbinds = function(mappings, unbinds)
-  for mode, values in pairs(unbinds) do
-    for _, key in pairs(values) do
+  for mode, keys in pairs(unbinds) do
+    for _, key in pairs(keys) do
       mappings[mode][key] = false
     end
   end
