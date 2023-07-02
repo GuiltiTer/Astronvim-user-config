@@ -1,17 +1,18 @@
-return {
+local mappings = {
   i = {
     -- codeium
     ["<S-Enter>"] = { "codeium#Accept()", silent = true, expr = true },
     ["<C-.>"] = { function() vim.api.nvim_call_function("codeium#CycleCompletions", { 1 }) end, silent = true, expr = true },
     ["<C-,>"] = { function() vim.api.nvim_call_function("codeium#CycleCompletions", { -1 }) end, silent = true, expr = true },
   },
+
   n = {
     -- basics
     ["<leader>w"] = { "<C-w>", desc = "Window" },
 
     -- harpoon
     ["<leader>m"] = { function() require("harpoon.mark").add_file() end, desc = "Mark" },
-    ["<leader>h"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "Harpoon" },
+    ["<leader>b"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "Harpoon" },
     ["]h"] = { function() require("harpoon.ui").nav_next() end, desc = "Next Harpoon" },
     ["[h"] = { function() require("harpoon.ui").nav_prev() end, desc = "Previous Harpoon" },
 
@@ -34,7 +35,7 @@ return {
     ["<leader>o"] = { function() require("ranger-nvim").open(true) end, desc = "Ranger" },
 
     -- neoclip
-    ["<leader>f'"] = { "<cmd>:Telescope neoclip<cr>", desc = "Find Clipboard" }
+    ["<leader>f'"] = { "<cmd>:Telescope neoclip<cr>", desc = "Find Clipboard" },
   },
   v = {
     -- move
@@ -42,3 +43,38 @@ return {
     ["<C-k>"] = { ":'<,'>MoveBlock(-1)<cr>", desc = "Move Block Up" },
   }
 }
+
+local unbinds = {
+  n = {
+    "<leader>bb",
+    "<leader>bd",
+    "<leader>b\\",
+    "<leader>b|",
+    "<leader>bc",
+    "<leader>bC",
+    "<leader>bl",
+    "<leader>bp",
+    "<leader>br",
+    "<leader>bs",
+    "<leader>bse",
+    "<leader>bsi",
+    "<leader>bsm",
+    "<leader>bsp",
+    "<leader>bsr",
+    "<leader>h",
+    "<leader>n"
+  }
+}
+
+local insert_unbinds = function(mappings, unbinds)
+  for mode, values in pairs(unbinds) do
+    for _, key in pairs(values) do
+      mappings[mode][key] = false
+    end
+  end
+  return mappings
+end
+
+mappings = insert_unbinds(mappings, unbinds)
+
+return mappings
