@@ -1,11 +1,18 @@
+local logo =
+{
+  "                 ▄   ▄                 ",
+  "             ▄█▄ █▀█▀█ ▄█▄             ",
+  "            ▀▀████▄█▄████▀▀            ",
+  "                 ▀█▀█▀                 ",
+  "                                       ",
+  "                                       ",
+  "    █▀▀ █░█ █ █░░ ▀█▀ █ ▀█▀ █▀▀ █▀█    ",
+  "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀",
+  "    █▄█ █▄█ █ █▄▄ ░█░ █ ░█░ ██▄ █▀▄    ",
+}
+
 return {
-  opts = function(_, opts)      -- override the options using lazy.nvim
-    opts.section.header.val = { -- change the header section value
-      "    ███    ██ ██    ██ ██ ███    ███",
-      "    ████   ██ ██    ██ ██ ████  ████",
-      "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-      "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-      "    ██   ████   ████   ██ ██      ██",
-    }
+  opts = function(_, opts)
+    opts.section.header.val = logo
   end,
 }
