@@ -22,10 +22,6 @@ local mappings = {
     -- lspsaga
     ["gp"] = { "<cmd>Lspsaga peek_definition<cr>", desc = "Peek Definition" },
 
-    -- move
-    ["<C-j>"] = { function() require("move").MoveLine(1) end, desc = "Move Line Down" },
-    ["<C-k>"] = { function() require("move").MoveLine(-1) end, desc = "Move Line Up" },
-
     -- todo-comments
     ["<leader>fp"] = { "<cmd>TodoTelescope<cr>", desc = "Find TODO" },
     ["]p"] = { function() require("todo-comments.jump").next() end, desc = "Next TODO" },
@@ -37,11 +33,6 @@ local mappings = {
     -- neoclip
     ["<leader>f'"] = { "<cmd>:Telescope neoclip<cr>", desc = "Find Clipboard" },
   },
-  v = {
-    -- move
-    ["<C-j>"] = { ":'<,'>MoveBlock(1)<cr>", desc = "Move Block Down" },
-    ["<C-k>"] = { ":'<,'>MoveBlock(-1)<cr>", desc = "Move Block Up" },
-  }
 }
 
 local unbinds = {

@@ -64,7 +64,6 @@ local oxocarbon = { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = 
 local harpoon = { "ThePrimeagen/harpoon", name = "harpoon", }
 local undotree = { "mbbill/undotree", name = "undotree", cmd = "UndotreeToggle" }
 local codeium = { "Exafunction/codeium.vim", event = "InsertEnter" }
-local move = { "fedepujol/move.nvim", name = "move", lazy = false }
 
 return {
   alpha,
@@ -77,7 +76,6 @@ return {
   codeium,
   lspsaga,
   flash,
-  move,
   hairline,
   surround,
   notify,
