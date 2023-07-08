@@ -51,7 +51,6 @@ local statusline = {
 
 return {
   opts = function(_, opts)
-    opts.tabline = nil
     opts.statusline = statusline
     opts.winbar = vscode_like_winbar
     return opts
