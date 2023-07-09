@@ -1,10 +1,3 @@
-local lspsaga = {
-  "glepnir/lspsaga.nvim",
-  event = "LspAttach",
-  config = require("user.configs.lspsaga").config,
-  dependencies = { { "nvim-tree/nvim-web-devicons" }, { "nvim-treesitter/nvim-treesitter" } }
-}
-
 local surround = {
   "kylechui/nvim-surround",
   version = "*",
@@ -74,7 +67,6 @@ return {
   harpoon,
   undotree,
   codeium,
-  lspsaga,
   flash,
   hairline,
   surround,
