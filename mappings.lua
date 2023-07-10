@@ -19,9 +19,6 @@ local mappings = {
     -- undotree
     ["<leader>U"] = { "<cmd>UndotreeToggle<cr>", desc = "Undo Tree" },
 
-    -- lspsaga
-    ["gp"] = { "<cmd>Lspsaga peek_definition<cr>", desc = "Peek Definition" },
-
     -- todo-comments
     ["<leader>fp"] = { "<cmd>TodoTelescope<cr>", desc = "Find TODO" },
     ["]p"] = { function() require("todo-comments.jump").next() end, desc = "Next TODO" },
