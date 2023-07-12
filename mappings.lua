@@ -1,14 +1,27 @@
+local cliapps = require "user.cliapps"
+
 local mappings = {
   i = {
     -- codeium
     ["<S-Enter>"] = { "codeium#Accept()", silent = true, expr = true },
-    ["<C-.>"] = { function() vim.api.nvim_call_function("codeium#CycleCompletions", { 1 }) end, silent = true, expr = true },
-    ["<C-,>"] = { function() vim.api.nvim_call_function("codeium#CycleCompletions", { -1 }) end, silent = true, expr = true },
+    ["<C-.>"] = {
+      function() vim.api.nvim_call_function("codeium#CycleCompletions", { 1 }) end,
+      silent = true,
+      expr = true,
+    },
+    ["<C-,>"] = {
+      function() vim.api.nvim_call_function("codeium#CycleCompletions", { -1 }) end,
+      silent = true,
+      expr = true,
+    },
   },
 
   n = {
     -- basics
     ["<leader>w"] = { "<C-w>", desc = "Window" },
+
+    -- Terminal Apps Description
+    ["<leader>ta"] = { desc = "Terminal Apps" },
 
     -- harpoon
     ["<leader>m"] = { function() require("harpoon.mark").add_file() end, desc = "Mark" },
@@ -29,6 +42,10 @@ local mappings = {
 
     -- neoclip
     ["<leader>f'"] = { "<cmd>:Telescope neoclip<cr>", desc = "Find Clipboard" },
+
+    -- cliapps
+    ["<leader>tb"] = { cliapps.btop, desc = "btop" },
+    ["<leader>tad"] = { cliapps.lazydocker, desc = "LazyDocker" },
   },
 }
 
@@ -50,8 +67,8 @@ local unbinds = {
     "<leader>bsp",
     "<leader>bsr",
     "<leader>h",
-    "<leader>n"
-  }
+    "<leader>n",
+  },
 }
 
 local insert_unbinds = function(mappings, unbinds)
