@@ -17,9 +17,6 @@ local mappings = {
   },
 
   n = {
-    -- Terminal Apps Description
-    ["<leader>ta"] = { desc = "Terminal Apps" },
-
     -- harpoon
     ["<leader>m"] = { function() require("harpoon.mark").add_file() end, desc = "Mark" },
     ["<leader>b"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "Harpoon" },
@@ -42,7 +39,7 @@ local mappings = {
 
     -- cliapps
     ["<leader>tb"] = { cliapps.btop, desc = "btop" },
-    ["<leader>tad"] = { cliapps.lazydocker, desc = "LazyDocker" },
+    ["<leader>td"] = { cliapps.lazydocker, desc = "LazyDocker" },
   },
 }
 
