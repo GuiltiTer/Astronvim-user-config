@@ -43,6 +43,12 @@ local flash = {
   keys = require("user.configs.flash").keys,
 }
 
+local undotree_telescope = {
+  "debugloop/telescope-undo.nvim",
+  config = function() require("telescope").load_extension "undo" end,
+  lazy = false,
+}
+
 local alpha = { "goolord/alpha-nvim", opts = require("user.configs.alpha").opts }
 local twilight = { "folke/twilight.nvim", cmd = "Twilight" }
 local cccpick = { "uga-rosa/ccc.nvim", cmd = "CccPick" }
@@ -70,6 +76,7 @@ return {
   oxocarbon,
   harpoon,
   undotree,
+  undotree_telescope,
   codeium,
   flash,
   hairline,
