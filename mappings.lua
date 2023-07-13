@@ -17,9 +17,6 @@ local mappings = {
   },
 
   n = {
-    -- basics
-    ["<leader>w"] = { "<C-w>", desc = "Window" },
-
     -- Terminal Apps Description
     ["<leader>ta"] = { desc = "Terminal Apps" },
 
