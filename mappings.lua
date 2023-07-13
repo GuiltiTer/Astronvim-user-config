@@ -44,8 +44,8 @@ local mappings = {
     ["<leader>f'"] = { "<cmd>:Telescope neoclip<cr>", desc = "Find Clipboard" },
 
     -- cliapps
-    ["<leader>tb"] = { cliapps.btop, desc = "btop" },
-    ["<leader>td"] = { cliapps.lazydocker, desc = "LazyDocker" },
+    ["<leader>tb"] = { cliapps.btop, desc = "ToggleTerm btop" },
+    ["<leader>td"] = { cliapps.lazydocker, desc = "ToggleTerm LazyDocker" },
   },
 }
 
