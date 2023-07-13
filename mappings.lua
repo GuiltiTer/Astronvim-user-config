@@ -47,25 +47,7 @@ local mappings = {
 }
 
 local unbinds = {
-  n = {
-    "<leader>bb",
-    "<leader>bd",
-    "<leader>b\\",
-    "<leader>b|",
-    "<leader>bc",
-    "<leader>bC",
-    "<leader>bl",
-    "<leader>bp",
-    "<leader>br",
-    "<leader>bs",
-    "<leader>bse",
-    "<leader>bsi",
-    "<leader>bsm",
-    "<leader>bsp",
-    "<leader>bsr",
-    "<leader>h",
-    "<leader>n",
-  },
+  n = {},
 }
 
 local insert_unbinds = function(mappings, unbinds)
