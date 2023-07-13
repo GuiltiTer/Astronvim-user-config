@@ -60,6 +60,7 @@ local undotree = { "mbbill/undotree", name = "undotree", cmd = "UndotreeToggle" 
 local codeium = { "Exafunction/codeium.vim", event = "InsertEnter" }
 local nvim_ghost = { "subnut/nvim-ghost.nvim", lazy = false }
 local fugitive = { "tpope/vim-fugitive", lazy = false }
+local direnv = { "direnv/direnv.vim", lazy = false }
 
 return {
   alpha,
@@ -85,4 +86,5 @@ return {
   twilight,
   nvim_ghost,
   fugitive,
+  direnv,
 }
