@@ -17,6 +17,11 @@ local mappings = {
   },
 
   n = {
+    -- basics
+    ["<leader><Enter>"] = { "<C-w>o", desc = "Maximize Window" },
+    ["<leader><space>"] = { "<cmd>Telescope buffers<cr>", desc = "Recent Files" },
+    ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "search" },
+
     -- harpoon
     ["<leader>m"] = { function() require("harpoon.mark").add_file() end, desc = "Mark" },
     ["<leader>b"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "Harpoon" },
