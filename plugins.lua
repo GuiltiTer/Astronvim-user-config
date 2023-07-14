@@ -1,33 +1,29 @@
 return {
-  { "goolord/alpha-nvim", opts = require("user.configs.alpha").opts },
-  { "folke/twilight.nvim", cmd = "Twilight" },
-  { "uga-rosa/ccc.nvim", cmd = "CccPick" },
-  { "kelly-lin/ranger.nvim", config = require("user.configs.ranger").config, lazy = false },
-  { "nvim-neo-tree/neo-tree.nvim", opts = require("user.configs.neo-tree").opts },
-  { "rcarriga/nvim-notify", config = require("user.configs.notify").config, lazy = false },
-  { "karb94/neoscroll.nvim", config = require("user.configs.neoscroll").config, lazy = false },
-  { "rebelot/heirline.nvim", opts = require("user.configs.heirline").opts },
-  { "dracula/vim", name = "dracula", priority = 1000, lazy = false },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
-  { "marko-cerovac/material.nvim", priority = 1000, lazy = false },
-  { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = false },
-  { "mbbill/undotree", name = "undotree", cmd = "UndotreeToggle" },
   { "Exafunction/codeium.vim", event = "InsertEnter" },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
+  { "debugloop/telescope-undo.nvim", config = function() require("telescope").load_extension "undo" end, lazy = false },
+  { "direnv/direnv.vim", lazy = false },
+  { "dracula/vim", name = "dracula", priority = 1000, lazy = false },
+  { "folke/twilight.nvim", cmd = "Twilight" },
+  { "goolord/alpha-nvim", opts = require("user.configs.alpha").opts },
+  { "karb94/neoscroll.nvim", config = require("user.configs.neoscroll").config, lazy = false },
+  { "kelly-lin/ranger.nvim", config = require("user.configs.ranger").config, lazy = false },
+  { "marko-cerovac/material.nvim", priority = 1000, lazy = false },
+  { "mbbill/undotree", name = "undotree", cmd = "UndotreeToggle" },
+  { "nvim-neo-tree/neo-tree.nvim", opts = require("user.configs.neo-tree").opts },
+  { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = false },
+  { "okuuva/auto-save.nvim", event = { "InsertLeave", "TextChanged" }, opts = require("user.configs.auto-save").opts },
+  { "rcarriga/nvim-notify", config = require("user.configs.notify").config, lazy = false },
+  { "rebelot/heirline.nvim", opts = require("user.configs.heirline").opts },
   { "subnut/nvim-ghost.nvim", lazy = false },
   { "tpope/vim-fugitive", lazy = false },
-  { "direnv/direnv.vim", lazy = false },
+  { "uga-rosa/ccc.nvim", cmd = "CccPick" },
 
   {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
     config = function() require("nvim-surround").setup() end,
-  },
-
-  {
-    "okuuva/auto-save.nvim",
-    event = { "InsertLeave", "TextChanged" },
-    opts = require("user.configs.auto-save").opts,
   },
 
   {
@@ -60,11 +56,5 @@ return {
     event = "VeryLazy",
     opts = require("user.configs.flash").opts,
     keys = require("user.configs.flash").keys,
-  },
-
-  {
-    "debugloop/telescope-undo.nvim",
-    config = function() require("telescope").load_extension "undo" end,
-    lazy = false,
   },
 }
