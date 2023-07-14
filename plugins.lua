@@ -61,7 +61,6 @@ local dracula = { "dracula/vim", name = "dracula", priority = 1000, lazy = false
 local catppuccin = { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false }
 local material = { "marko-cerovac/material.nvim", priority = 1000, lazy = false }
 local oxocarbon = { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = false }
-local harpoon = { "ThePrimeagen/harpoon", name = "harpoon" }
 local undotree = { "mbbill/undotree", name = "undotree", cmd = "UndotreeToggle" }
 local codeium = { "Exafunction/codeium.vim", event = "InsertEnter" }
 local nvim_ghost = { "subnut/nvim-ghost.nvim", lazy = false }
@@ -74,7 +73,6 @@ return {
   catppuccin,
   material,
   oxocarbon,
-  harpoon,
   undotree,
   undotree_telescope,
   codeium,
