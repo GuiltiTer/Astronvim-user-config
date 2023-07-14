@@ -5,6 +5,6 @@ return {
     opt = {
       showtabline = 0,
       timeoutlen = 100,
-    }
+    },
   },
 }
