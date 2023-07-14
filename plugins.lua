@@ -20,6 +20,13 @@ return {
   { "uga-rosa/ccc.nvim", cmd = "CccPick" },
 
   {
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function() require("telescope").load_extension "file_browser" end,
+    lazy = false,
+  },
+
+  {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",

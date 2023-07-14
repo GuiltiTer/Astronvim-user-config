@@ -40,6 +40,9 @@ local mappings = {
     -- cliapps
     ["<leader>tb"] = { cliapps.btop, desc = "ToggleTerm btop" },
     ["<leader>td"] = { cliapps.lazydocker, desc = "ToggleTerm LazyDocker" },
+
+    -- filebrowser
+    ["<leader>fB"] = { "<cmd>Telescope file_browser<cr>", desc = "File Browser" },
   },
 }
 
