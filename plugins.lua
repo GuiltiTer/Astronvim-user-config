@@ -18,6 +18,7 @@ return {
   { "subnut/nvim-ghost.nvim", lazy = false },
   { "tpope/vim-fugitive", lazy = false },
   { "uga-rosa/ccc.nvim", cmd = "CccPick" },
+  { "yutkat/confirm-quit.nvim", event = "CmdlineEnter", config = true },
 
   {
     "nvim-telescope/telescope-file-browser.nvim",
