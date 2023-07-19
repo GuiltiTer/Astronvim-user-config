@@ -19,6 +19,7 @@ return {
   { "tpope/vim-fugitive", lazy = false },
   { "uga-rosa/ccc.nvim", cmd = "CccPick" },
   { "yutkat/confirm-quit.nvim", event = "CmdlineEnter", config = true },
+  { "ThePrimeagen/harpoon", lazy = false, dependencies = { "nvim-lua/plenary.nvim" } },
 
   {
     "nvim-telescope/telescope-file-browser.nvim",

@@ -44,6 +44,13 @@ local mappings = {
 
     -- filebrowser
     ["<leader>fB"] = { "<cmd>Telescope file_browser<cr>", desc = "File Browser" },
+
+    -- harpoon
+    ["<leader>h"] = { desc = "Harpoon" },
+    ["<leader>hm"] = { function() require("harpoon.mark").add_file() end, desc = "Mark file" },
+    ["<leader>hh"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "Menu" },
+    ["<leader>{h"] = { function() require("harpoon.ui").nav_prev() end, desc = "Previous mark" },
+    ["<leader>}h"] = { function() require("harpoon.ui").nav_next() end, desc = "Next mark" },
   },
 }
 
