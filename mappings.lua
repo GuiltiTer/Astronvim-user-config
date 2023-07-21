@@ -51,6 +51,9 @@ local mappings = {
     ["<leader>hh"] = { function() require("harpoon.ui").toggle_quick_menu() end, desc = "Menu" },
     ["<leader>{h"] = { function() require("harpoon.ui").nav_prev() end, desc = "Previous mark" },
     ["<leader>}h"] = { function() require("harpoon.ui").nav_next() end, desc = "Next mark" },
+
+    -- spectre
+    ["<leader>fR"] = { function() require("spectre").open() end, desc = "Spectre" },
   },
 }
 

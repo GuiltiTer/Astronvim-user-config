@@ -20,6 +20,7 @@ return {
   { "uga-rosa/ccc.nvim", cmd = "CccPick" },
   { "yutkat/confirm-quit.nvim", event = "CmdlineEnter", config = true },
   { "ThePrimeagen/harpoon", lazy = false, dependencies = { "nvim-lua/plenary.nvim" } },
+  { "nvim-lua/plenary.nvim", dependencies = { "nvim-pack/nvim-spectre" } },
 
   {
     "nvim-telescope/telescope-file-browser.nvim",
