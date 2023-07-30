@@ -22,6 +22,9 @@ local mappings = {
     ["<leader><space>"] = { "<cmd>Telescope buffers<cr>", desc = "Recent Files" },
     ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "search" },
 
+    ["<C-y>"] = { '"qy', desc = "Yank to register q" },
+    ["<C-p>"] = { '"qp', desc = "Pase to register q" },
+
     -- undotree
     ["<leader>U"] = { "<cmd>UndotreeToggle<cr>", desc = "Undo Tree" },
     ["<leader>fu"] = { "<cmd>Telescope undo<cr>", desc = "Find Undo Tree" },
