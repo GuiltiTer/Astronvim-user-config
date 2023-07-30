@@ -23,6 +23,13 @@ return {
   { "nvim-lua/plenary.nvim", dependencies = { "nvim-pack/nvim-spectre" } },
 
   {
+    "nvimdev/lspsaga.nvim",
+    config = require("user.configs.lspsaga").config,
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+    lazy = false,
+  },
+
+  {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function() require("telescope").load_extension "file_browser" end,

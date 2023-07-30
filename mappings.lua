@@ -57,6 +57,11 @@ local mappings = {
 
     -- spectre
     ["<leader>r"] = { function() require("spectre").toggle() end, desc = "Spectre" },
+
+    -- lspsaga
+    ["gp"] = { "<cmd>Lspsaga peek_definition<cr>", desc = "Peek Definition" },
+    ["<leader>lS"] = { "<cmd>Lspsaga outline<cr>", desc = "Symbols outline" },
+    ["<cr>"] = { "<cmd>Lspsaga finder<cr>", desc = "References" },
   },
 }
 
