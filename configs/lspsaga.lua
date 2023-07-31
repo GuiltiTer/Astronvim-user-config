@@ -15,7 +15,6 @@ return {
         layout = "normal",
         default = "ref+imp+def",
         keys = {
-          shuttle = "e",
           vsplit = "v",
           split = "s",
         },
