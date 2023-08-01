@@ -19,8 +19,6 @@ local mappings = {
   n = {
     -- basics
     ["<leader><Enter>"] = { "<C-w>o", desc = "Maximize Window" },
-    ["<leader><space>"] = { "<cmd>Telescope buffers<cr>", desc = "Recent Files" },
-    ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "search" },
 
     ["<C-y>"] = { '"qy', desc = "Yank to register q" },
     ["<C-p>"] = { '"qp', desc = "Pase to register q" },
@@ -62,6 +60,10 @@ local mappings = {
     ["gp"] = { "<cmd>Lspsaga peek_definition<cr>", desc = "Peek Definition" },
     ["<leader>lS"] = { "<cmd>Lspsaga outline<cr>", desc = "Symbols outline" },
     ["<cr>"] = { "<cmd>Lspsaga finder<cr>", desc = "References" },
+
+    -- telescope
+    ["<tab>"] = { function() require("user.configs.telescope").buffers() end, desc = "Buffers" },
+    ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "search" },
   },
 }
 
