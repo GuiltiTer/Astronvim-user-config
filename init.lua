@@ -4,7 +4,6 @@ return {
   options = {
     opt = {
       showtabline = 0,
-      timeoutlen = 100,
     },
   },
 }
