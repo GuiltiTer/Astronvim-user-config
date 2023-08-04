@@ -19,6 +19,14 @@ local mappings = {
   n = {
     -- basics
     ["<leader><Enter>"] = { "<C-w>o", desc = "Maximize Window" },
+    ["<tab>"] = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer",
+    },
+    ["<S-tab>"] = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
 
     ["<C-y>"] = { '"qy', desc = "Yank to register q" },
     ["<C-p>"] = { '"qp', desc = "Pase to register q" },
@@ -62,7 +70,7 @@ local mappings = {
     ["<cr>"] = { "<cmd>Lspsaga finder<cr>", desc = "References" },
 
     -- telescope
-    ["<tab>"] = { function() require("user.configs.telescope").buffers() end, desc = "Buffers" },
+    ["<leader><space>"] = { function() require("user.configs.telescope").buffers() end, desc = "Buffers" },
     ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "search" },
   },
 }
