@@ -1,6 +1,7 @@
 local cliapps = require "user.cliapps"
-
 local mappings = {
+  t = {},
+
   i = {
     -- codeium
     ["<S-Enter>"] = { "codeium#Accept()", silent = true, expr = true },
@@ -49,7 +50,10 @@ local mappings = {
     -- cliapps
     ["<leader>tb"] = { cliapps.btop, desc = "ToggleTerm btop" },
     ["<leader>td"] = { cliapps.lazydocker, desc = "ToggleTerm LazyDocker" },
-    ["<leader>tt"] = { cliapps.tab, desc = "ToggleTerm tab" },
+    ["<leader>tv"] = { "<cmd>10ToggleTerm size=64 direction=vertical<cr>", desc = "ToggleTerm vertical" },
+    ["<leader>th"] = { "<cmd>11ToggleTerm size=16 direction=horizontal<cr>", desc = "ToggleTerm horizontal" },
+    ["<leader>tf"] = { "<cmd>12ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
+    ["<leader>tt"] = { "<cmd>13ToggleTerm direction=tab<cr>", desc = "ToggleTerm float" },
 
     -- filebrowser
     ["<leader>fB"] = { "<cmd>Telescope file_browser<cr>", desc = "File Browser" },
