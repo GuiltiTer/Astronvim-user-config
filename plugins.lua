@@ -21,7 +21,11 @@ return {
   { "yutkat/confirm-quit.nvim", event = "CmdlineEnter", config = true },
   { "ThePrimeagen/harpoon", lazy = false, dependencies = { "nvim-lua/plenary.nvim" } },
   { "nvim-lua/plenary.nvim", dependencies = { "nvim-pack/nvim-spectre" } },
-
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "BufRead",
+    config = require("user.configs.treesitter-context").config,
+  },
   {
     "nvimdev/lspsaga.nvim",
     config = require("user.configs.lspsaga").config,
