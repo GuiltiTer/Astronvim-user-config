@@ -55,6 +55,7 @@ local statusline = {
 }
 
 return {
+  "rebelot/heirline.nvim",
   opts = function(_, opts)
     opts.statusline = statusline
     opts.winbar = vscode_like_winbar

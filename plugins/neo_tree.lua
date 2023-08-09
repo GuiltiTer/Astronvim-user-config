@@ -1,6 +1,7 @@
 local mappings = {}
 
 return {
+  "nvim-neo-tree/neo-tree.nvim",
   opts = function(_, opts)
     opts.sources = { "filesystem", "git_status" }
     -- local close_on_open_handler = { event = "file_opened", handler = function(_) vim.fn.execute "Neotree close" end }

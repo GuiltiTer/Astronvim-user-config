@@ -74,7 +74,7 @@ local mappings = {
     ["<cr>"] = { "<cmd>Lspsaga finder<cr>", desc = "References" },
 
     -- telescope
-    ["<leader><space>"] = { function() require("user.configs.telescope").buffers() end, desc = "Buffers" },
+    ["<leader><space>"] = { function() require("user.telescope").buffers() end, desc = "Buffers" },
     ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "search" },
   },
 }
