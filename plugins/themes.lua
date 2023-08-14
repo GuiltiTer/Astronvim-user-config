@@ -3,4 +3,5 @@ return {
   { "dracula/vim", name = "dracula", priority = 1000, lazy = false },
   { "marko-cerovac/material.nvim", priority = 1000, lazy = false },
   { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = false },
+  { "folke/tokyonight.nvim", priority = 1000, lazy = false },
 }
