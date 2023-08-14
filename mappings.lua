@@ -28,7 +28,7 @@ local mappings = {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
-
+    ["<leader>x"] = { "<C-w>c", desc = "Close Window" },
     ["<C-y>"] = { '"qy', desc = "Yank to register q" },
     ["<C-p>"] = { '"qp', desc = "Pase to register q" },
 
