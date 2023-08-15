@@ -17,7 +17,6 @@ local config = function()
       },
     },
   }
-  require("telescope").load_extension "neoclip"
 end
 
 return {
