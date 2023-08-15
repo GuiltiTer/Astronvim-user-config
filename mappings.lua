@@ -17,6 +17,11 @@ local mappings = {
     },
   },
 
+  x = {
+    -- refactoring
+    ["<leader>R"] = { function() require("telescope").extensions.refactoring.refactors() end, desc = "Refactor menu" },
+  },
+
   n = {
     -- basics
     ["<leader><Enter>"] = { "<C-w>o", desc = "Maximize Window" },
@@ -78,6 +83,9 @@ local mappings = {
     -- telescope
     ["<leader><space>"] = { function() require("user.telescope").buffers() end, desc = "Buffers" },
     ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "search" },
+
+    -- refactoring
+    ["<leader>R"] = { function() require("telescope").extensions.refactoring.refactors() end, desc = "Refactor menu" },
   },
 }
 
