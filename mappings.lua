@@ -84,8 +84,8 @@ local mappings = {
     ["<leader>{h"] = { function() require("harpoon.ui").nav_prev() end, desc = "Previous mark" },
     ["<leader>}h"] = { function() require("harpoon.ui").nav_next() end, desc = "Next mark" },
 
-    -- spectre
-    ["<leader>r"] = { function() require("spectre").toggle() end, desc = "Spectre" },
+    -- searchbox
+    ["<leader>r"] = { "<cmd>SearchBoxReplace confirm=menu<cr>", desc = "Spectre" },
 
     -- lspsaga
     ["gp"] = { "<cmd>Lspsaga peek_definition<cr>", desc = "Peek Definition" },
