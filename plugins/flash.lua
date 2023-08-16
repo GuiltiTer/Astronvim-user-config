@@ -1,5 +1,6 @@
 local opts = {
   modes = {
+    search = { enabled = false },
     char = {
       enabled = true,
       -- dynamic configuration for ftFT motions
