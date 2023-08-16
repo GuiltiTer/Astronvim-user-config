@@ -48,8 +48,8 @@ local mappings = {
     ["<leader>x"] = { "<C-w>c", desc = "Close Window" },
     ["<C-y>"] = { '"qy', desc = "Yank to register q" },
     ["<C-p>"] = { '"qp', desc = "Pase to register q" },
-    ["go"] = { "<C-o>", desc = "Go out" },
-    ["gi"] = { "<C-i>", desc = "Go in" },
+    -- ["go"] = { "<C-o>", desc = "Go out" },
+    -- ["gi"] = { "<C-i>", desc = "Go in" },
 
     -- undotree
     ["<leader>U"] = { "<cmd>UndotreeToggle<cr>", desc = "Undo Tree" },
