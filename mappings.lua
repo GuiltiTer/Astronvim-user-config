@@ -20,18 +20,6 @@ local mappings = {
   x = {
     -- refactoring
     ["<leader>R"] = { function() require("telescope").extensions.refactoring.refactors() end, desc = "Refactor menu" },
-
-    -- spider
-    ["w"] = { function() require("spider").motion "w" end, desc = "Spider-w" },
-    ["e"] = { function() require("spider").motion "e" end, desc = "Spider-e" },
-    ["b"] = { function() require("spider").motion "b" end, desc = "Spider-b" },
-  },
-
-  o = {
-    -- spider
-    ["w"] = { function() require("spider").motion "w" end, desc = "Spider-w" },
-    ["e"] = { function() require("spider").motion "e" end, desc = "Spider-e" },
-    ["b"] = { function() require("spider").motion "b" end, desc = "Spider-b" },
   },
 
   n = {
@@ -91,11 +79,6 @@ local mappings = {
 
     -- refactoring
     ["<leader>R"] = { function() require("telescope").extensions.refactoring.refactors() end, desc = "Refactor menu" },
-
-    -- spider
-    ["w"] = { function() require("spider").motion "w" end, desc = "Spider-w" },
-    ["e"] = { function() require("spider").motion "e" end, desc = "Spider-e" },
-    ["b"] = { function() require("spider").motion "b" end, desc = "Spider-b" },
   },
 }
 
