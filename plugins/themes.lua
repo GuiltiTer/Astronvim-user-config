@@ -4,4 +4,5 @@ return {
   { "marko-cerovac/material.nvim", priority = 1000, lazy = false },
   { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = false },
   { "folke/tokyonight.nvim", priority = 1000, lazy = false },
+  { "astrotheme", priority = 1000, lazy = false },
 }
