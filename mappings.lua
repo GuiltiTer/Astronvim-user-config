@@ -36,6 +36,7 @@ local mappings = {
     ["<leader>x"] = { "<C-w>c", desc = "Close Window" },
     ["<C-y>"] = { '"qy', desc = "Yank to register q" },
     ["<C-p>"] = { '"qp', desc = "Pase to register q" },
+    ["<leader>le"] = { "<cmd>LspRestart<cr>", desc = "Restart LSP" },
     -- ["go"] = { "<C-o>", desc = "Go out" },
     -- ["gi"] = { "<C-i>", desc = "Go in" },
 
