@@ -24,6 +24,7 @@ return {
   "rebelot/heirline.nvim",
   opts = function(_, opts)
     opts.statusline = statusline
+    opts.winbar = nil
     return opts
   end,
 }
