@@ -27,4 +27,5 @@ return {
     opts.section.header.val = logo
     opts.section.buttons.val = actions
   end,
+  enabled = false,
 }

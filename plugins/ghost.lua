@@ -1,1 +1,1 @@
-return { "subnut/nvim-ghost.nvim", lazy = false }
+return { "subnut/nvim-ghost.nvim", lazy = false, enabled = false }
