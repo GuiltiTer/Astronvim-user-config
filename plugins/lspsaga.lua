@@ -1,5 +1,6 @@
 local config = function()
   require("lspsaga").setup {
+    symbol_in_winbar = { enable = false },
     definition = {
       keys = {
         edit = "e",
