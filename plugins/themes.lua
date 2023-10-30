@@ -5,4 +5,5 @@ return {
   { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = false },
   { "folke/tokyonight.nvim", priority = 1000, lazy = false },
   { "astrotheme", priority = 1000, lazy = false },
+  { "projekt0n/github-nvim-theme", priority = 1000, lazy = false },
 }
