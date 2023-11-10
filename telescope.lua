@@ -7,7 +7,8 @@ local buffer_picker = function()
     sort_mru = true,
     attach_mappings = function(prompt_bufnr, map)
       local delete_buf = function() actions.delete_buffer(prompt_bufnr) end
-      map("n", "<bs>", delete_buf)
+      map("n", "<C-d>", delete_buf)
+      map("i", "<C-d>", delete_buf)
       return true
     end,
   }
