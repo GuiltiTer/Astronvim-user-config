@@ -2,20 +2,7 @@ local cliapps = require "user.cliapps"
 local mappings = {
   t = {},
 
-  i = {
-    -- codeium
-    ["<S-Enter>"] = { "codeium#Accept()", silent = true, expr = true },
-    ["<C-.>"] = {
-      function() vim.api.nvim_call_function("codeium#CycleCompletions", { 1 }) end,
-      silent = true,
-      expr = true,
-    },
-    ["<C-,>"] = {
-      function() vim.api.nvim_call_function("codeium#CycleCompletions", { -1 }) end,
-      silent = true,
-      expr = true,
-    },
-  },
+  i = {},
 
   x = {
     -- refactoring
