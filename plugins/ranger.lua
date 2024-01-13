@@ -8,6 +8,13 @@ local config = function()
       ["oh"] = ranger.OPEN_MODE.split,
       ["ot"] = ranger.OPEN_MODE.tabedit,
     },
+    ui = {
+      border = "rounded",
+      height = 0.80,
+      width = 0.88,
+      x = 0.5,
+      y = 0.5,
+    },
   }
 end
 
