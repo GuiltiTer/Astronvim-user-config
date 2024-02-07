@@ -36,8 +36,8 @@ local mappings = {
     ["]p"] = { function() require("todo-comments.jump").next() end, desc = "Next TODO" },
     ["[p"] = { function() require("todo-comments.jump").prev() end, desc = "Previous TODO" },
 
-    -- ranger
-    ["<leader>o"] = { function() require("ranger-nvim").open(true) end, desc = "Ranger" },
+    -- File Manager
+    ["<leader>o"] = { require("tfm").open, desc = "File Manager" },
 
     -- neoclip
     ["<leader>f'"] = { "<cmd>:Telescope neoclip<cr>", desc = "Find Clipboard" },
