@@ -1,3 +1,3 @@
 return {
-  timeout_ms = 60000,
+  timeout_ms = 5000,
 }
