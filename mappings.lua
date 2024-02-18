@@ -59,7 +59,7 @@ local mappings = {
     -- lspsaga
     ["gp"] = { "<cmd>Lspsaga peek_definition<cr>", desc = "Peek Definition" },
     ["<leader>lS"] = { "<cmd>Lspsaga outline<cr>", desc = "Symbols outline" },
-    ["<cr>"] = { "<cmd>Lspsaga finder<cr>", desc = "References" },
+    ["<leader>lk"] = { "<cmd>Lspsaga finder<cr>", desc = "References" },
 
     -- telescope
     ["<leader>h"] = { function() require("user.telescope").buffers() end, desc = "Buffers" },
