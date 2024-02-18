@@ -1,5 +1,8 @@
 local config = function()
   require("lspsaga").setup {
+    ui = {
+      border = "rounded",
+    },
     symbol_in_winbar = { enable = false },
     definition = {
       keys = {
@@ -9,11 +12,8 @@ local config = function()
       },
     },
     finder = {
-      max_height = 1,
-      left_width = 0.3,
-      right_width = 0.5,
-      layout = "normal",
-      default = "ref+imp+def",
+      layout = "float",
+      default = "def+ref+imp",
       keys = {
         vsplit = "v",
         split = "s",
