@@ -5,26 +5,16 @@ return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
-
-      lsp = {
-        progress = {
-          enabled = false, --disable bottom right progress bar
-        },
-      },
-
       presets = {
+        long_message_to_split = true,
         lsp_doc_border = true,
       },
-
-      routes = {
-        {
-          -- prevent notification burst
-          filter = {
-            event = "msg_show",
-          },
-          opts = { skip = false },
-        },
+      messages = {
+        view = "mini",
+        view_error = "notify",
+        view_warn = "notify",
       },
+      lsp = { progress = { enabled = false } },
     },
   },
 }
