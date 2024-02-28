@@ -66,6 +66,9 @@ local mappings = {
 
     -- refactoring
     ["<leader>R"] = { function() require("telescope").extensions.refactoring.refactors() end, desc = "Refactor Menu" },
+
+    -- zen mode
+    ["<leader>uz"] = { function() require("zen-mode").toggle() end, desc = "Toggle zen mode" },
   },
 }
 
