@@ -67,6 +67,9 @@ local mappings = {
 
     -- zen mode
     ["<leader>uz"] = { function() require("zen-mode").toggle() end, desc = "Toggle zen mode" },
+
+    -- neogit
+    ["<leader>gn"] = { function() require("neogit").open() end, desc = "Neogit" },
   },
 }
 
