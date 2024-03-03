@@ -63,6 +63,7 @@ local mappings = {
     -- telescope
     ["<leader>h"] = { function() require("user.telescope").buffers() end, desc = "Buffers" },
     ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "search" },
+    ["<leader>?"] = { function() require("telescope.builtin").commands() end, desc = "Find commands" },
 
     -- refactoring
     ["<leader>R"] = { function() require("telescope").extensions.refactoring.refactors() end, desc = "Refactor Menu" },
