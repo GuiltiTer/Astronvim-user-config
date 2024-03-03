@@ -50,7 +50,7 @@ local mappings = {
     ["<leader>tt"] = { "<cmd>13ToggleTerm direction=tab<cr>", desc = "ToggleTerm float" },
 
     -- searchbox
-    ["<leader>r"] = { "<cmd>SearchBoxReplace confirm=menu<cr>", desc = "Spectre" },
+    ["<leader>r"] = { "<cmd>SearchBoxReplace confirm=menu<cr>", desc = "SearchBox" },
 
     -- lspsaga
     ["gp"] = { "<cmd>Lspsaga peek_definition<cr>", desc = "Peek Definition" },
