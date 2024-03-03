@@ -9,4 +9,4 @@ local config = function()
   vim.notify = notify
 end
 
-return { "rcarriga/nvim-notify", config = config, lazy = false }
+return { "rcarriga/nvim-notify", config = config }
