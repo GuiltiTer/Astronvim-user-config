@@ -28,7 +28,6 @@ local mappings = {
 
     -- undotree
     ["<leader>U"] = { "<cmd>UndotreeToggle<cr>", desc = "Undo Tree" },
-    ["<leader>fu"] = { "<cmd>Telescope undo<cr>", desc = "Find Undo Tree" },
 
     -- todo-comments
     ["<leader>fp"] = { "<cmd>TodoTelescope<cr>", desc = "Find TODO" },
@@ -37,9 +36,6 @@ local mappings = {
 
     -- File Manager
     ["<leader>o"] = { require("tfm").open, desc = "File Manager" },
-
-    -- neoclip
-    ["<leader>f'"] = { "<cmd>:Telescope neoclip<cr>", desc = "Find Clipboard" },
 
     -- cliapps
     ["<leader>tb"] = { cliapps.btop, desc = "ToggleTerm btop" },

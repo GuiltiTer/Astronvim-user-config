@@ -7,8 +7,6 @@ return {
   config = require "plugins.configs.telescope",
   opts = function(_, opts)
     require("telescope").load_extension "refactoring"
-    require("telescope").load_extension "undo"
-    require("telescope").load_extension "neoclip"
     return opts
   end,
 }
