@@ -23,8 +23,8 @@ local mappings = {
     ["<C-y>"] = { '"qy', desc = "Yank to register q" },
     ["<C-p>"] = { '"qp', desc = "Pase to register q" },
     ["<leader>le"] = { "<cmd>LspRestart<cr>", desc = "Restart LSP" },
-    -- ["go"] = { "<C-o>", desc = "Go out" },
-    -- ["gi"] = { "<C-i>", desc = "Go in" },
+    ["go"] = { function() require("bufjump").backward() end, desc = "Go out" },
+    ["gi"] = { function() require("bufjump").forward() end, desc = "Go in" },
 
     -- undotree
     ["<leader>U"] = { "<cmd>UndotreeToggle<cr>", desc = "Undo Tree" },
