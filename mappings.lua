@@ -49,9 +49,6 @@ local mappings = {
     ["<leader>tf"] = { "<cmd>12ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
     ["<leader>tt"] = { "<cmd>13ToggleTerm direction=tab<cr>", desc = "ToggleTerm float" },
 
-    -- filebrowser
-    ["<leader>fB"] = { "<cmd>Telescope file_browser<cr>", desc = "File Browser" },
-
     -- searchbox
     ["<leader>r"] = { "<cmd>SearchBoxReplace confirm=menu<cr>", desc = "Spectre" },
 
