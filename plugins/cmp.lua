@@ -1,5 +1,15 @@
 local cmp = require "cmp"
 
+local sources = {
+  { name = "otter" },
+}
+
+local extend_sources = function(opts)
+  for _, source in ipairs(sources) do
+    table.insert(opts.sources, source)
+  end
+end
+
 local apply_cmdline = function()
   cmp.setup.cmdline("/", {
     mapping = cmp.mapping.preset.cmdline(),
@@ -28,6 +38,7 @@ return {
   keys = { ":", "/" },
   config = function(_, opts)
     cmp.setup(opts)
+    extend_sources(opts)
     apply_cmdline()
   end,
 
