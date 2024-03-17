@@ -1,52 +1,87 @@
-local quarto = {
-  "quarto-dev/quarto-nvim",
-  ft = { "quarto" },
+return {
+  "kiyoon/jupynium.nvim",
+  build = "pip install --user .",
 
-  opts = {
-    codeRunner = {
-      enabled = true,
-      default_method = "molten",
-      ft_runners = { python = "molten" },
-      never_run = { "yaml" },
-    },
-  },
-  dependencies = {
-    "jmbuhr/otter.nvim",
-    "hrsh7th/nvim-cmp",
-    "neovim/nvim-lspconfig",
-    "nvim-treesitter/nvim-treesitter",
-  },
-}
-
-local molten = {
-  "benlubas/molten-nvim",
-
-  version = "^1.0.0",
-  ft = { "quarto", "python" },
-
-  build = ":UpdateRemotePlugins",
-  init = function()
-    -- this is an example, not a default. Please see the readme for more configuration options
-    vim.g.molten_output_win_max_height = 80
-  end,
+  ft = { "python" },
   config = function()
-    vim.api.nvim_create_autocmd("FileType", {
-      desc = "Molten local buffer keymap",
+    require("jupynium").setup {
+      python_host = "python",
+      default_notebook_URL = "localhost:8888/nbclassic",
+      jupyter_command = "jupyter",
 
-      pattern = { "python", "quarto" },
-      group = vim.api.nvim_create_augroup("moten_keymap", { clear = true }),
+      notebook_dir = nil,
+      firefox_profiles_ini_path = nil,
+      firefox_profile_name = nil,
+      auto_start_server = {
+        enable = false,
+        file_pattern = { "*.ju.*" },
+      },
+      auto_attach_to_server = {
+        enable = true,
+        file_pattern = { "*.ju.*", "*.md" },
+      },
+      auto_start_sync = {
+        enable = false,
+        file_pattern = { "*.ju.*", "*.md" },
+      },
+      auto_download_ipynb = false,
+      auto_close_tab = true,
+      autoscroll = {
+        enable = true,
+        mode = "always",
+        cell = { top_margin_percent = 20 },
+      },
+
+      scroll = {
+        page = { step = 0.5 },
+        cell = { top_margin_percent = 20 },
+      },
+      jupynium_file_pattern = { "*.ju.*" },
+      use_default_keybindings = false,
+      textobjects = { use_default_keybindings = false },
+
+      syntax_highlight = { enable = true },
+      shortsighted = false,
+      kernel_hover = {
+        floating_win_opts = {
+          max_width = 84,
+          border = "none",
+        },
+      },
+    }
+
+    vim.api.nvim_create_autocmd("BufEnter", {
+      desc = "Jupynium local buffer keymap",
+
+      pattern = { "*.ju.*" },
+      group = vim.api.nvim_create_augroup("jupynium_keymap", { clear = true }),
       callback = function()
-        vim.keymap.set("n", "m", " ", { buffer = true, desc = "Molten" })
-        vim.keymap.set("n", "mi", "<cmd>MoltenInit<cr>", { buffer = true, desc = "Molten init" })
-        vim.keymap.set("n", "md", "<cmd>MoltenRestart<cr>", { buffer = true, desc = "Molten restart" })
-        vim.keymap.set("n", "ml", "<cmd>MoltenEvaluateLine<cr>", { buffer = true, desc = "Molten run" })
-        vim.keymap.set("n", "mr", "<cmd>MoltenReevaluateCell<cr>", { buffer = true, desc = "Molten rerun" })
-        vim.keymap.set("n", "mm", "<cmd>MoltenEvaluateOperator<cr>", { buffer = true, desc = "Molten run..." })
-
-        vim.keymap.set("v", "me", "<cmd>MoltenEvaluateVisual<cr><esc>", { buffer = true, desc = "Molten run" })
+        require("which-key").register({
+          [";"] = {
+            name = "Run",
+            r = { "<cmd>JupyniumExecuteSelectedCells<cr>", "Jupynium run cell", mode = { "n", "v" } },
+            a = { "<cmd>JupyniumStartAndAttachToServer<cr>", "Jupynium start & attach" },
+            s = { "<cmd>JupyniumStartSync<cr>", "Jupynium start sync" },
+            S = { "<cmd>JupyniumStopSync<cr>", "Jupynium stop sync" },
+            c = { "i# %%<Enter><Esc>", "Add cell" },
+            k = {
+              name = "Kernel",
+              r = { "<cmd>JupyniumKernelRestart<cr>", "Restart" },
+              i = { "<cmd>JupyniumKernelInterrupt<cr>", "Interrupt" },
+            },
+          },
+        }, {
+          buffer = 0,
+          prefix = "<leader>",
+        })
       end,
     })
+
+    vim.cmd [[
+      hi! link JupyniumCodeCellSeparator CursorLine
+      hi! link JupyniumMarkdownCellSeparator CursorLine
+      hi! link JupyniumMarkdownCellContent CursorLine
+      hi! link JupyniumMagicCommand Keyword
+    ]]
   end,
 }
-
-return { quarto, molten }
