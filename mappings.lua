@@ -22,7 +22,10 @@ local mappings = {
     },
     ["<C-y>"] = { '"qy', desc = "Yank to register q" },
     ["<C-p>"] = { '"qp', desc = "Pase to register q" },
+    ["Q"] = { "<cmd>q<cr>", desc = "Quit" },
     ["<leader>le"] = { "<cmd>LspRestart<cr>", desc = "Restart LSP" },
+
+    -- bufjump
     ["go"] = { function() require("bufjump").backward() end, desc = "Go out" },
     ["gi"] = { function() require("bufjump").forward() end, desc = "Go in" },
 
