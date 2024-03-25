@@ -69,6 +69,11 @@ local mappings = {
 
     -- neogit
     ["<leader>gn"] = { function() require("neogit").open() end, desc = "Neogit" },
+
+    -- diffview
+    ["<leader>gd"] = { "<cmd>DiffviewOpen<cr>", desc = "diff" },
+    ["<leader>gHb"] = { "<cmd>DiffviewFileHistory<cr>", desc = "diff branch history" },
+    ["<leader>gHf"] = { "<cmd>DiffviewFileHistory %<cr>", desc = "diff file history" },
   },
 }
 
