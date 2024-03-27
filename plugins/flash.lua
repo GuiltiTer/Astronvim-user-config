@@ -110,7 +110,7 @@ local keys = {
 
 return {
   "folke/flash.nvim",
-  event = "VeryLazy",
+  event = "BufRead",
   opts = opts,
   keys = keys,
 }

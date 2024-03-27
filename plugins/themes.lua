@@ -1,9 +1,9 @@
 return {
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false },
-  { "dracula/vim", name = "dracula", priority = 1000, lazy = false },
-  { "marko-cerovac/material.nvim", priority = 1000, lazy = false },
-  { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = false },
-  { "folke/tokyonight.nvim", priority = 1000, lazy = false },
-  { "astrotheme", priority = 1000, lazy = false },
-  { "projekt0n/github-nvim-theme", priority = 1000, lazy = false },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = true },
+  { "dracula/vim", name = "dracula", priority = 1000, lazy = true },
+  { "marko-cerovac/material.nvim", priority = 1000, lazy = true },
+  { "nyoom-engineering/oxocarbon.nvim", priority = 1000, lazy = true },
+  { "folke/tokyonight.nvim", priority = 1000, lazy = true },
+  { "astrotheme", priority = 1000, lazy = true },
+  { "projekt0n/github-nvim-theme", priority = 1000, lazy = true },
 }

@@ -1,5 +1,3 @@
-local cmp = require "cmp"
-
 local sources = {
   { name = "otter" },
 }
@@ -11,6 +9,7 @@ local extend_sources = function(opts)
 end
 
 local apply_cmdline = function()
+  local cmp = require "cmp"
   cmp.setup.cmdline("/", {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
@@ -37,6 +36,7 @@ return {
   "hrsh7th/nvim-cmp",
   keys = { ":", "/" },
   config = function(_, opts)
+    local cmp = require "cmp"
     cmp.setup(opts)
     extend_sources(opts)
     apply_cmdline()

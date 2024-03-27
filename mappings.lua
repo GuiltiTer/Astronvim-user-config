@@ -1,4 +1,3 @@
-local cliapps = require "user.cliapps"
 local mappings = {
   t = {},
 
@@ -38,11 +37,11 @@ local mappings = {
     ["[p"] = { function() require("todo-comments.jump").prev() end, desc = "Previous TODO" },
 
     -- File Manager
-    ["<leader>o"] = { require("tfm").open, desc = "File Manager" },
+    ["<leader>o"] = { function() require("tfm").open() end, desc = "File Manager" },
 
     -- cliapps
-    ["<leader>tb"] = { cliapps.btop, desc = "ToggleTerm btop" },
-    ["<leader>td"] = { cliapps.lazydocker, desc = "ToggleTerm LazyDocker" },
+    ["<leader>tb"] = { function() require("user.cliapps").btop() end, desc = "ToggleTerm btop" },
+    ["<leader>td"] = { function() require("user.cliapps").lazydocker() end, desc = "ToggleTerm LazyDocker" },
     ["<leader>tv"] = { "<cmd>10ToggleTerm size=64 direction=vertical<cr>", desc = "ToggleTerm vertical" },
     ["<leader>th"] = { "<cmd>11ToggleTerm size=16 direction=horizontal<cr>", desc = "ToggleTerm horizontal" },
     ["<leader>tf"] = { "<cmd>12ToggleTerm direction=float<cr>", desc = "ToggleTerm float" },
