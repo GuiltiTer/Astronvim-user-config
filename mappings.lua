@@ -73,6 +73,10 @@ local mappings = {
     ["<leader>gd"] = { "<cmd>DiffviewOpen<cr>", desc = "diff" },
     ["<leader>gHb"] = { "<cmd>DiffviewFileHistory<cr>", desc = "diff branch history" },
     ["<leader>gHf"] = { "<cmd>DiffviewFileHistory %<cr>", desc = "diff file history" },
+
+    -- treesj
+    ["gJ"] = { function() require("treesj").join() end, desc = "Join lines" },
+    ["gK"] = { function() require("treesj").split() end, desc = "Split lines" },
   },
 }
 
